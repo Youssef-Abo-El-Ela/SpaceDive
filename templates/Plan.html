@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="{{url_for('static',filename='Plan.css')}}">
+  <title>Space Dive</title>
+</head>
+
+<div>
+  <header>
+    <div class="navbar">
+      <div class="logo"> <img src="{{url_for('static', filename='Logo with name2.png')}}" alt="Logo"></div>
+      <ul class="links">
+        <li><a href="{{url_for('Homepage')}}">Homepage</a></li>
+        <li><a href="{{url_for('Info')}}">Planetary</a></li>
+        <li><a href="{{url_for('Book')}}">Book</a></li>
+        <li><a href="{{url_for('AboutUs')}}">AboutUs</a></li>
+      </ul>
+      <a href="{{url_for('Regstration')}}" class="action_btn" id="login-btn">login/signup</a>
+      <a href="{{url_for('Homepage')}}" style="display: none;" id="logout-btn"><i class="fas fa-sign-out-alt fa-lg"></i></a>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+    <div class="dropdown_menu">
+      <li><a href="{{url_for('Homepage')}}">Homepage</a></li>
+      <li><a href="{{url_for('Info')}}">Planetary</a></li>
+      <li><a href="{{url_for('Book')}}">Book</a></li>
+      <li><a href="{{url_for('AboutUs')}}">AboutUs</a></li>
+    <a href="{{url_for('Regstration')}}" class="action_btn">login/signup</a>
+    </div>
+  </header>
+  <div class="title">
+    <div class="animation_header">
+      <div class="animation-container">
+        <div class="split-text">
+          <span class="left">Offers !</span>
+          <span class="right">Special</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="vision-banner">
+    
+    <div class="vision-text">
+      <img src="{{url_for('static',filename='shuttle.svg')}}" alt="rocket" class="shuttle" id="firstShuttle"><br>
+Embark on a celestial journey unlike any other!<br>Discover the cosmos with our exclusive special packages for space travel tourism and let your dreams take flight among the stars.
+      <img src="{{url_for('static',filename='shuttle.svg')}}" alt="rocket" class="shuttle">
+     </div>
+  </div>
+  <section class="pricing-plan">
+    <div class="plan basic">
+      <h2>Basic Package</h2>
+      <p class="price">$125000</p>
+      <ul>
+        <li>Visitng Mars and Venus</li>
+        <li><b>Activities :</b></li>
+        <li>Space Diving on Mars --- Hiking and Mountaineering on Mars --- Venus Surface Exploration</ul>
+      </ul>
+      <button class="btn">Book Now!</button>
+    </div>
+  </section>
+
+  <section class="pricing-plan">
+    <div class="plan extended">
+      <h2>Mega Package</h2>
+      <p class="price">$180000</p>
+      <ul>
+        <li>Visiting Jupiter, Uranus</li>
+        <li>Visiting Jupiter, Uranus</li>
+        <li><b>Activities :</b></li>
+        <li>Jupiter Moon's Gazing --- Jupiter's Magnetic Dance --- Ice Skating on "Uranian" Rings --- Celestial Soundscapes on Uranus
+        </li>
+      </ul>
+      <button class="btn">Book Now!</button>
+    </div>
+  </section>
+  <section class="pricing-plan">
+    <div class="plan beyond">
+      <h2>To Infinity and Beyond <span id="rocket">🚀</span></h2>
+      <p class="price">$275000</p>
+      <ul>
+        <li>Visit all planets</li>
+        <li><b>Activities :</b></li>
+        <li>Jupiter Moon's Gazing --- Jupiter's Magnetic Dance --- Ice Skating on "Uranian" Rings --- Celestial Soundscapes on Uranus
+        </li>
+      </ul>
+      <button class="btn">Book Now!</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>MC1</h4>
+          <ul>
+            <li><a href="#">content1</a></li>
+            <li><a href="#">content2</a></li>
+            <li><a href="#">content3</a></li>
+            <li><a href="#">content4</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>MC2</h4>
+          <ul>
+            <li><a href="#">content1</a></li>
+            <li><a href="#">content2</a></li>
+            <li><a href="#">content3</a></li>
+            <li><a href="#">content4</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>MC3</h4>
+          <ul>
+            <li><a href="#">content1</a></li>
+            <li><a href="#">content2</a></li>
+            <li><a href="#">content3</a></li>
+            <li><a href="#">content4</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>MC1</h4>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

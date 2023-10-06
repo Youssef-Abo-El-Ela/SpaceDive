@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ url_for('static',filename='Book.css')}}">
+    <title>Space Dive</title>
+</head>
+
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo"> <img src="{{url_for('static', filename='Logo with name2.png')}}" alt="Logo"></div>
+      <ul class="links">
+       
+        <li><a href="{{url_for('Homepage')}}">Homepage</a></li>
+        <li><a href="{{url_for('Plan')}}">Plans</a></li>
+        <li><a href="{{url_for('Info')}}">Planetary</a></li>
+        <li><a href="{{url_for('AboutUs')}}">About us</a></li>
+      </ul>
+      <a href="{{url_for('Regstration')}}" class="action_btn" id="login-btn">login/signup</a>
+      <a href="{{url_for('Homepage')}}" style="display: none;" id="logout-btn"><i
+          class="fas fa-sign-out-alt fa-lg"></i></a>
+
+
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+    <div class="dropdown_menu">
+      <li><a href="{{url_for('Homepage')}}">Homepage</a></li>
+      <li><a href="{{url_for('Plan')}}">Plans</a></li>
+      <li><a href="{{url_for('Info')}}">Planetary</a></li>
+      <li><a href="{{url_for('AboutUs')}}">About us</a></li>
+    <a href="{{url_for('Regstration')}}" class="action_btn" id="login-btn">login/signup</a>
+    </div>
+  </header>
+
+  <div class="container" id="container">
+    <div class="menu_container">
+      <button class="Btn Btn-left" id="spaceTravelButton">Space-travel</button>
+      <button class="Btn Btn-left" id="planetActivityButton">Planet activity</button>
+      <button class="Btn Btn-left" id="planetsButton">Planets</button>
+
+    </div>
+    <div class="sub_menu_container">
+      <label class="Btn-radio">
+        <input type="radio" name="travelType" value="Round Trip" id="Round-trip" checked>Round Trip
+      </label>
+      <label class="Btn-radio">
+        <input id="One-way-css" type="radio" name="travelType" value="One Way">One Way
+      </label>
+      <label class="Btn-radio">
+        <input type="radio" name="travelType" value="Multi Plante">Multi Plante
+      </label>
+
+    </div>
+    
+      <form class="form-container">
+        <div class="destination">
+          <div class="select-menu">
+            <div class="select-btn">
+              <span class="sBtn-text">Earth</span>
+              <i class="bx bx-chevron-down"></i>
+            </div>
+            <ul class="options">
+              <li class="option">
+                <i class="bx bxl-github" style="color: #171515;"></i>
+                <span class="option-text">Earth</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <button class="Btn-rotate">
+              <i class="fa-solid fa-arrow-right fa-2xl" style="color: #ffffff;"></i>
+            </button>
+          </div>
+          <div class="select-menu">
+            <div class="select-btn">
+              <span class="sBtn-text">Destination</span>
+              <i class="bx bx-chevron-down"></i>
+            </div>
+            <ul class="options">
+              <li class="option">
+                <i class="bx bxl-github" style="color: #171515;"></i>
+                <span class="option-text">Venus</span>
+              </li>
+              <li class="option">
+                <i class="bx bxl-instagram-alt" style="color: #E1306C;"></i>
+                <span class="option-text">Mars</span>
+              </li>
+              <li class="option">
+                <i class="bx bxl-linkedin-square" style="color: #0E76A8;"></i>
+                <span class="option-text">Jupiter</span>
+              </li>
+              <li class="option">
+                <i class="bx bxl-facebook-circle" style="color: #4267B2;"></i>
+                <span class="option-text">Uranus</span>
+              </li>
+            </ul>
+          </div>
+          <div class="select-menu" id="Departing-date">
+            <div class="select-btn">
+              <span class="sBtn-text">Departing Date</span>
+              <i class="bx bx-chevron-down"></i>
+            </div>
+            <ul class="options" >
+              <li class="option">
+                <i class="bx bxl-github" style="color: #171515;"></i>
+                <span class="option-text">Date</span>
+              </li>
+              <li class="option">
+                <i class="bx bxl-instagram-alt" style="color: #E1306C;"></i>
+                <span class="option-text">Date</span>
+              </li>
+              <li class="option">
+                <i class="bx bxl-linkedin-square" style="color: #0E76A8;"></i>
+                <span class="option-text">Date</span>
+              </li>
+            </ul>
+          </div>
+          <div class="select-menu" id="Returning-List-box">
+            <div class="select-btn">
+              <span class="sBtn-text">Returning Date</span>
+              <i class="bx bx-chevron-down"></i>
+            </div>
+            <ul class="options">
+              <li class="option">
+                <i class="bx bxl-github" style="color: #171515;"></i>
+                <span class="option-text">Date</span>
+              </li>
+              <li class="option">
+                <i class="bx bxl-instagram-alt" style="color: #E1306C;"></i>
+                <span class="option-text">Date</span>
+              </li>
+              <li class="option">
+                <i class="bx bxl-linkedin-square" style="color: #0E76A8;"></i>
+                <span class="option-text">Date</span>
+              </li>
+            </ul>
+          </div>
+          <button class="Submit">Book Now</button>
+        </div>
+      </form>   
+  </div>
+  <div class="container-video">
+    <video src="{{ url_for('static',filename='cg_animation_of_rocket_launching (1080p).mp4') }}"  class="video-background" type="video/mp4" muted loop autoplay ></video>
+  </div>
+ 
+  <footer class="footer">
+    <div class="container-footer">
+      <div class="row">
+        <div class="footer-col">
+          <h4>MC1</h4>
+          <ul>
+            <li><a href="#">content1</a></li>
+            <li><a href="#">content2</a></li>
+            <li><a href="#">content3</a></li>
+            <li><a href="#">content4</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>MC2</h4>
+          <ul>
+            <li><a href="#">content1</a></li>
+            <li><a href="#">content2</a></li>
+            <li><a href="#">content3</a></li>
+            <li><a href="#">content4</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>MC3</h4>
+          <ul>
+            <li><a href="#">content1</a></li>
+            <li><a href="#">content2</a></li>
+            <li><a href="#">content3</a></li>
+            <li><a href="#">content4</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>MC4</h4>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="{{url_for('static',filename='Book.js')}}"></script>
+</body>
+
+</html>

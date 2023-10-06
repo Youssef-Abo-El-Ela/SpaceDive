@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{{ url_for('static',filename='Info.css')}}">
+	<title>Planets Information</title>
+</head>
+
+<body>
+	<header>
+		<div class="navbar">
+			<div class="logo"> <img src="{{url_for('static', filename='Logo with name2.png')}}" alt="Logo"></div>
+			<ul class="links">
+				<li><a href="{{url_for('Homepage')}}">Homepage</a></li>
+				<li><a href="{{url_for('Plan')}}">Plan</a></li>
+				<li><a href="{{url_for('Book')}}">Book</a></li>
+				<li><a href="{{url_for('AboutUs')}}">AboutUs</a></li>
+			</ul>
+			<a href="{{url_for('Regstration')}}" class="action_btn" id="login-btn">login/signup</a>
+      <a href="{{url_for('Homepage')}}" style="display: none;" id="logout-btn"><i class="fas fa-sign-out-alt fa-lg"></i></a>
+			<div class="toggle_btn">
+				<i class="fa-solid fa-bars"></i>
+			</div>
+		</div>
+		<div class="dropdown_menu">
+			<li><a href="{{url_for('Homepage')}}">Homepage</a></li>
+				<li><a href="{{url_for('Plan')}}">Plan</a></li>
+				<li><a href="{{url_for('Book')}}">Book</a></li>
+				<li><a href="{{url_for('AboutUs')}}">AboutUs</a></li>
+
+			<a href="{{url_for('Regstration')}}" class="action_btn">login/signup</a>
+		</div>
+	</header>
+
+	<div class="container">
+		<h1>Planets Information</h1>
+		<div class="select-menu">
+			<div class="select-btn">
+				<span class="sBtn-text">Select a Planet</span>
+				<i class="bx bx-chevron-down"></i>
+			</div>
+			<ul class="options">
+				<li class="option" data-value="venus">
+					<span class="option-text">Venus</span>
+				</li>
+
+				<li class="option" data-value="mars">
+					<s class="option-text"><s>Mars</s></span>
+				</li>
+
+				<li class="option" data-value="jupiter">
+					<span class="option-text">Jupiter</span>
+				</li>
+
+				<li class="option" data-value="uranus">
+					<span class="option-text"><s>Uranus</s></span>
+				</li>
+			</ul>
+		</div>
+		<div id="planets-list" class="flex-container">
+
+			<!-- Venus Card -->
+			<div class="planet-card" data-value="Venus">
+				<div class="planet-name">Venus</div>
+				<div class="planet-content" id="venus_content">
+					Venus, the second planet from the Sun and sixth-largest in our solar system, has a radius of about
+					6,051 kilometers, approximately 95% that of Earth, resulting in a surface gravity of roughly 90%
+					compared to Earth's. It's the closest large body to Earth aside from the Moon, always visible near
+					sunrise or sunset, and appears as the most brilliant planet in the sky. Venus is symbolized by ♀ and
+					shares many similarities in size and mass with Earth. Venus is often considered Earth's twin because
+					of its similar size, mass, and density. Initially, it was thought to be a wet, Earth-like world, but
+					it is currently extremely hot and dry, unsuitable for life. Scientists study Venus to learn about
+					its extreme conditions and to gain insights into environmental changes on Earth.When the opposition
+					phenomenon with Earth occurs, the distance between them is about 38 million kilometers (about 24
+					million miles) to 41 million kilometers (about 25.5 million miles).This phenomenon repeats every 19
+					to 22 months<br><br>
+					<b>Activities:</b><br> <b>1.Venusian Cloud Gliding:</b> <br> Explore the cloud layers of Venus
+					in specially designed gliders with advanced cooling systems. Stay comfortable in high-temperature
+					suits with oxygen supply, guided by skilled pilots who prioritize safety.<br><br>
+					<b>2.Extreme Volcano Trekking:</b><br>Embark on a thrilling journey to Venus's towering volcanoes.
+					Equipped with heat-resistant trekking suits and expert guides, you'll witness dramatic eruptions
+					while maintaining comfort and safety. <br><br>
+					<b>3.Venusian Botanical Gardens:</b> Step into the future of Venus through our climate-controlled
+					domes. Experience heat-resistant plant species and Venusian soil simulation while learning from
+					expert botanists and guides about the potential for terraforming this mysterious world<br>
+
+				</div>
+				<div class="circular_image_venus">
+					<img src="{{url_for('static',filename='venus-removebg-preview.png')}}" alt="Venus">
+				</div>
+			</div>
+
+			<!-- Mars Card -->
+			<div class="planet-card" data-value="Mars">
+				<div class="planet-name">Mars</div>
+				<div class="planet-content" id="mars_content">
+					Mars, the fourth planet in our solar system, is known as the "Red Planet" due to its reddish
+					appearance. It's about half the size of Earth but shares some Earth-like features like clouds,
+					winds, a 24-hour day, and seasonal weather patterns. Mars has lower gravity (0.375 times that of
+					Earth) and two moons, Phobos and Deimos. While once considered a potential habitat for life, Mars is
+					now known for its barren, frozen landscape. It orbits the Sun at varying distances, with its closest
+					approach during the opposition phenomenon, which repeats every 26 months. Mars also features Valles
+					Marineris, the deepest canyon, and Olympus Mons, the highest volcano in the solar system. <br><br>
+					<b>Activities:</b><br><br> <b>1.Space Diving on Mars:</b> <br> Experience the ultimate thrill of
+					space diving on Mars with our state-of-the-art space shuttle. Dive through Mars' crimson skies in
+					specially designed suits, feel the lower gravity, witness breathtaking landscapes, and contribute to
+					scientific research while ensuring safety. Book now for an adrenaline-pumping journey like no
+					other!<br><br>
+					<b>2.Hiking and Mountaineering:</b><br>Join us for an out-of-this-world experience – hiking and
+					mountaineering on Mars, right at Olympus Mons! Conquer the tallest volcano in the solar system, and
+					witness the awe-inspiring Martian landscapes. It's a journey of a lifetime waiting for intrepid
+					explorers like you. Dare to dream, dare to hike Olympus Mons! <br><br>
+					<b>3.Martian Rover Expeditions:</b> Take the driver's seat in exploring the mysteries of the Red
+					Planet. Drive robotic rovers, collect samples, and unearth the secrets of Mars, all while
+					contributing to groundbreaking scientific discoveries. Your journey to the stars starts here!<br>
+				</div>
+				<div class="circular_image_mars">
+					<img src="{{url_for('static',filename='mars-removebg-preview.png')}}" alt="Mars">
+				</div>
+
+			</div>
+
+			<!-- Jupiter Card -->
+			<div class="planet-card" data-value="Jupiter">
+				<div class="planet-name">Jupiter</div>
+				<div class="planet-content" id="venus_content">
+					Jupiter, the most massive planet in our solar system and fifth from the Sun, is a prominent
+					celestial object in the night sky. Its surface gravity is 2.4 times that of Earth due to its gas
+					composition. Jupiter, symbolized by ♃, is named after the Roman ruler of the gods. It's enormous, 11
+					times larger than Earth, with colorful cloud bands visible even with a small telescope. Jupiter has
+					a narrow ring system and an impressive 92 known moons, including Europa, possibly hiding a
+					warm-water ocean.The planet has an internal heat source, emits more energy than it receives from the
+					Sun, and its
+					hydrogen exists in a fluid metallic state due to extreme pressure. Jupiter boasts the solar system's
+					strongest magnetic field and a massive magnetosphere. During the opposition phenomenon, when Earth
+					and Jupiter are closest, they are about 365 million miles apart, repeating every 13 months.<br><br>
+					<b>Activities:</b><br><br> <b>1.Jupiter Moon’s Gazing:</b> <br>Gaze Jupiter's intriguing moons -
+					Europa, Ganymede, and Io! Join us in studying their unique features, potential for life, and
+					interactions with Jupiter's magnetic field. Discover the mysteries of the cosmos with us! <br><br>
+					<b>2.Jupiter's Magnetic Dance:</b><br>Explore the mysteries of Jupiter's intense magnetic field
+					through interactive simulations. Learn how it interacts with the planet's moons and generates
+					stunning auroras.<br><br>
+					<b>3.Aqua-Cloud Diving: </b> Imagine technology that allows us to explore the dense cloud layers as
+					if they were underwater. Equipped with advanced suits, you can "swim" through the gas clouds,
+					observing the unique creatures and phenomena that might exist there
+					<br>
+				</div>
+				<div class="circular_image_jupiter">
+					<img src="{{url_for('static',filename='Jupiter-removebg-preview.png')}}" alt="Jupiter">
+				</div>
+			</div>
+
+			<!-- Uranus Card -->
+			<div class="planet-card" data-value="Uranus">
+				<div class="planet-name">Uranus</div>
+				<div class="planet-content" id="uranus_content">
+					Uranus, the seventh planet from the Sun and the least massive of the solar system's giant planets,
+					is mainly composed of gases, resulting in a surface gravity about 86% that of Earth. It appears as a
+					blue-green point of light and was discovered in 1781, making it the first planet found in modern
+					times. Uranus lacks a solid surface and gets its color from methane in its atmosphere. It has a
+					unique 84-year orbit and is almost circular, with a nearly flat alignment compared to the solar
+					system's plane. The opposition phenomenon, when Earth and Uranus are closest, occurs approximately
+					every 12 months, at a distance of about 2.9 billion kilometers.<br><br>
+					<b>Activities:</b><br><br> <b>1.Ice Skating on "Uranian" Rings:</b> <br>Gliding on the rings of
+					Uranus is now a reality! Dive into the ethereal beauty of the outer solar system as you ice skate
+					under the simulated 'Uranian' rings. Experience the thrill of an interplanetary adventure on our
+					futuristic ice rink. <br><br>
+					<b>2.Celestial Soundscapes:</b><br>Discover the sounds of Uranus! Immerse yourself in celestial
+					soundscapes inspired by the icy giant's data. Join us for a cosmic concert under the stars, where
+					music and the mysteries of the universe harmonize. <br><br>
+					<b>3.Uranus Trivia and Science Nights:</b> Test your knowledge and ignite your curiosity about
+					Uranus! Join us for lively trivia games and in-depth discussions about the mysteries of this ice
+					giant. Become a Uranus expert in an atmosphere of fun and learning. <br>
+
+				</div>
+				<div class="circular_image_uranus">
+					<img src="{{url_for('static',filename='Uranus-transparent.png')}}" alt="Uranus">
+				</div>
+			</div>
+
+		</div>
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="footer-col">
+						<h4>MC1</h4>
+						<ul>
+							<li><a href="#">content1</a></li>
+							<li><a href="#">content2</a></li>
+							<li><a href="#">content3</a></li>
+							<li><a href="#">content4</a></li>
+						</ul>
+					</div>
+					<div class="footer-col">
+						<h4>MC2</h4>
+						<ul>
+							<li><a href="#">content1</a></li>
+							<li><a href="#">content2</a></li>
+							<li><a href="#">content3</a></li>
+							<li><a href="#">content4</a></li>
+						</ul>
+					</div>
+					<div class="footer-col">
+						<h4>MC3</h4>
+						<ul>
+							<li><a href="#">content1</a></li>
+							<li><a href="#">content2</a></li>
+							<li><a href="#">content3</a></li>
+							<li><a href="#">content4</a></li>
+						</ul>
+					</div>
+					<div class="footer-col">
+						<h4>MC1</h4>
+						<div class="social-links">
+							<a href="#"><i class="fa-brands fa-facebook"></i></a>
+							<a href="#"><i class="fa-brands fa-instagram"></i></a>
+							<a href="#"><i class="fa-brands fa-linkedin"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="{{url_for('static',filename='Info.js')}}"></script>
+</body>
+
+</html>

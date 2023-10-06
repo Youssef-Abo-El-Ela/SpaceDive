@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Sapce Dive</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='AboutUs.css')}}">
+</head>
+
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo"> <img src="{{url_for('static', filename='Logo with name2.png')}}" alt="Logo"></div>
+      <ul class="links">
+        
+        <li><a href="{{url_for('Homepage')}}">Homepage</a></li>
+        <li><a href="{{url_for('Plan')}}">Plan</a></li>
+        <li><a href="{{url_for('Info')}}">Planetary</a></li>
+        <li><a href="{{url_for('Book')}}">Book</a></li>
+      </ul>
+      <a href="{{url_for('Regstration')}}" class="action_btn" id="login-btn">login/signup</a>
+      <a href="{{url_for('Homepage')}}" style="display: none;" id="logout-btn"><i class="fas fa-sign-out-alt fa-lg"></i></a>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+    <div class="dropdown_menu">
+      <li><a href="{{url_for('Homepage')}}">Homepage</a></li>
+        <li><a href="{{url_for('Plan')}}">Plan</a></li>
+        <li><a href="{{url_for('Info')}}">Planetary</a></li>
+        <li><a href="{{url_for('Book')}}">Book</a></li>
+      <a href="{{url_for('Regstration')}}" class="action_btn">login/signup</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="animation_header">
+      <div class="animation-container">
+        <div class="animation-text">Who are We?!</div>
+      </div>
+    </div>
+    <h1 class="slogan">"Where Adventure and Passion Will Forever Survive"</h1>
+    <br>
+    <div class="vision-banner">
+      <div class="vision-text">
+        Our Vision: <br><br>To explore the cosmos, expand human knowledge, and inspire the next generation of space
+        enthusiasts.
+      </div>
+    </div>
+    <p class="aboutUs">
+      At Space Dive, we are pioneers in the field of interplanetary tourism, dedicated to making the unimaginable a
+      reality. With a passion for exploring the cosmos and a commitment to providing unparalleled experiences, we have
+      embarked on a groundbreaking journey to offer travelers the opportunity to venture beyond Earth's boundaries.
+      <br><br>
+      Our mission is to open up the wonders of the universe to adventurers from all walks of life. We understand that
+      space travel is a unique and challenging endeavor, which is why we prioritize safety and comfort above all else.
+      We
+      are proud to offer comprehensive medical insurance coverage to ensure the well-being of our travelers during their
+      cosmic odyssey.
+      <br><br>
+      But our commitment doesn't stop there. Space Dive is more than just a travel agency; we are curators of
+      extraordinary memories. In addition to space travel, we curate a range of exciting programs and activities to
+      enrich
+      your interstellar adventure. From stargazing on distant planets to participating in zero-gravity sports, we
+      promise
+      a journey filled with wonder and discovery.
+      <br><br>
+      With a team of experts, cutting-edge technology, and partnerships with space agencies and private enterprises, we
+      have positioned ourselves at the forefront of the space tourism industry. Join us on a voyage of a lifetime as we
+      explore the cosmos together. Welcome to Space Dive, where the stars are your destination, and the universe is
+      your playground.
+    </p>
+    <br>
+    <h1 class="banner">High Board</h1>
+    <div class="gallery">
+      <div class="person">
+        <img src="{{ url_for('static',filename='ekramy.jpg') }}" alt="Youssef Ekramy">
+      
+        <p>Youssef Ekramy</p>
+      </div>
+      <div class="person">
+        <img src="{{ url_for('static',filename='lashin.jpg') }}" alt="Youssef Lasheen">
+     
+        <p>Youssef Lashin</p>
+
+      </div>
+      <div class="person">
+        <img src="{{ url_for('static',filename='youssef.jpg') }}" alt="Youssef Ahmed">
+       
+        <p>Youssef Ahmed</p>
+      
+
+      </div>
+      <div class="person">
+        <img src="{{ url_for('static',filename='mabrouk.jpg') }}" alt="Mohamed Mabrouk">
+       
+        <p>Mohamed Mabrouk</p>
+      
+      </div>
+      <div class="person">
+        <img src="{{ url_for('static',filename='aboelela-edited.jpg') }}" alt="Youssef Abo-El-Ela" id="aboelela">
+
+        <p>Youssef Abo-El-Ela</p>
+
+      </div>
+    </div>
+  </main>
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>MC1</h4>
+          <ul>
+            <li><a href="#">content1</a></li>
+            <li><a href="#">content2</a></li>
+            <li><a href="#">content3</a></li>
+            <li><a href="#">content4</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>MC2</h4>
+          <ul>
+            <li><a href="#">content1</a></li>
+            <li><a href="#">content2</a></li>
+            <li><a href="#">content3</a></li>
+            <li><a href="#">content4</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>MC3</h4>
+          <ul>
+            <li><a href="#">content1</a></li>
+            <li><a href="#">content2</a></li>
+            <li><a href="#">content3</a></li>
+            <li><a href="#">content4</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>MC1</h4>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="{{ url_for('static',filename='AboutUs.js') }}"></script>
+</body>
+
+</html>

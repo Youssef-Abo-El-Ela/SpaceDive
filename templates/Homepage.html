@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="{{ url_for('static',filename='Homepage.css')}}">
+  <title>Space Dive</title>
+
+</head>
+
+<body>
+
+
+  <header>
+    <div class="navbar">
+      <div class="logo"><a>
+        <img src="{{url_for('static', filename='Logo with name2.png')}}" alt="Logo">
+    </a></div>
+      <ul class="links">
+        <li><a href="{{url_for('Plan')}}">Plans</a></li>
+        <li><a href="{{url_for('Info')}}">Planetary</a></li>
+        <li><a href="{{url_for('Book')}}" id='book-now-btn'>Book Now</a></li>
+        <li><a href="{{url_for('AboutUs')}}">About us</a></li>
+      </ul>
+      <a href="{{url_for('Regstration')}}" class="action_btn" id="login-btn">login/signup</a>
+      <a href="{{url_for('Homepage')}}" style="display: none;" id="logout-btn"><i class="fas fa-sign-out-alt fa-lg"></i></a>
+      
+
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+    <div class="dropdown_menu">
+      <li><a href="{{url_for('Plan')}}">Plans</a></li>
+        <li><a href="{{url_for('Info')}}">Planetary</a></li>
+        <li><a href="{{url_for('Book')}}" id='book-now-btn'>Book Now</a></li>
+        <li><a href="{{url_for('AboutUs')}}">About us</a></li>
+      <a href="{{url_for('Regstration')}}" class="action_btn" id="login-btn">login/signup</a>
+    </div>
+  </header>
+  <div class="showcase">
+    <video src="{{ url_for('static',filename='pexels-joseph-redfield-7184620 (Original).mp4') }}" muted loop autoplay></video>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>MC1</h4>
+          <ul>
+            <li><a href="#">content1</a></li>
+            <li><a href="#">content2</a></li>
+            <li><a href="#">content3</a></li>
+            <li><a href="#">content4</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>MC2</h4>
+          <ul>
+            <li><a href="#">content1</a></li>
+            <li><a href="#">content2</a></li>
+            <li><a href="#">content3</a></li>
+            <li><a href="#">content4</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>MC3</h4>
+          <ul>
+            <li><a href="#">content1</a></li>
+            <li><a href="#">content2</a></li>
+            <li><a href="#">content3</a></li>
+            <li><a href="#">content4</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>MC4</h4>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<script src="{{url_for('static',filename='Homepage.js')}}">
+
+  </script>
+</body>
+
+</html>
